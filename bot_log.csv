@@ -1,0 +1,17 @@
+2023-02-07 14:41:47,522: INFO _welcome-362 Bot: Timon_bot [@Timon11_bot]
+2023-02-07 14:41:47,522: INFO start_polling-358 Start polling.
+2023-02-07 14:41:52,726: ERROR start_polling-390 Cause exception while getting updates.
+Traceback (most recent call last):
+  File "D:\обучение\GB IT test\block2\Python\Seminar10\my_bot\venv\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "D:\обучение\GB IT test\block2\Python\Seminar10\my_bot\venv\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "D:\обучение\GB IT test\block2\Python\Seminar10\my_bot\venv\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "D:\обучение\GB IT test\block2\Python\Seminar10\my_bot\venv\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "D:\обучение\GB IT test\block2\Python\Seminar10\my_bot\venv\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "D:\обучение\GB IT test\block2\Python\Seminar10\my_bot\venv\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
